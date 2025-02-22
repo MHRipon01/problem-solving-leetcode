@@ -10,7 +10,7 @@ public:
         for (int i = 0; i < 4; i++)
         {
             int ci = si + d[i].first;
-            int cj = sj + d[i].second;
+            int cj = sj + d[i].second; 
         }
     }
     int islandPerimeter(vector<vector<int>> &grid);
