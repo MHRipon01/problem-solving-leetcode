@@ -13,7 +13,7 @@ int main()
     arr[3] = 2;
     for(ll i=4;i<=n;i++)
     {
-        arr[i] = arrr[i-1] + arr[i-2] + arr[i-3] + arr[i-4];
+        arr[i] = arr[i-1] + arr[i-2] + arr[i-3] + arr[i-4];
     }
     cout<<arr[n];
     return 0;
