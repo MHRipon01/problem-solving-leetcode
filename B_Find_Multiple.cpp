@@ -7,11 +7,15 @@ int main()
     int a, b, c;
     cin >> a >> b >> c;
 
-    if (a > (c * 2) || (c * 2) > b)
-        cout << -1 << endl;
-    else if(a< c && b< c)
-        cout << c << endl;
-    else
-        cout << c * 2 << endl;
+    for (int i = a; i <= b; i++)
+    {
+        if (i % c == 0)
+        {
+            cout << i << endl;
+            return 0;
+        }
+    }
+
+    cout << -1 << endl;
     return 0;
 }
