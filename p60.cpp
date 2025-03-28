@@ -5,27 +5,31 @@ using namespace std;
 
 int main()
 {
-    vector<int>A;
+    vector<int> A;
 
-    int N , X;
+    int N, X;
     cin >> N >> X;
 
-    for(int i=0; i< N; i++){
+    for (int i = 0; i < N; i++)
+    {
         int num;
-        cin>> num;
-        
-        if(num != X){
+        cin >> num;
+
+        if (num != X)
+        {
             A.push_back(num);
         }
     }
 
-
-    for(int i= 0; i<A.size(); i++ ){
-        cout << " " << A[i];
+    if (!A.empty())
+    {
+        for (int i = 0; i < A.size(); i++)
+        {
+            cout << " " << A[i];
+        }
     }
 
     cout << endl;
-
 
     return 0;
 }
