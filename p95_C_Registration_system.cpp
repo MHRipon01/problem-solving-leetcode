@@ -20,7 +20,7 @@ int main()
         auto it = mp.find(s);
         if(it != mp.end())
         {
-            cout<<s+to_string(mp[s])<<'\n';
+            cout<<s + to_string(mp[s])<<'\n';
             mp[s]++;
         }
         else
