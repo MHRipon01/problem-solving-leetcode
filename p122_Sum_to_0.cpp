@@ -1,60 +1,42 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    ios_base::sync_with_stdio(false);
+int main()
+{
+    ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int T;
-    cin >> T;
+    int t;
+    cin >> t;
 
-    while (T--) {
-        int N;
-        cin >> N;
+    while (t--)
+    {
+        int n;
+        cin >> n;
 
-        if (N == 1) {
-            cout << -1 << "\n";
-            continue;
+        if (n & 1)
+        {
+            if (n < 3)
+                cout << -1 << endl;
+            else
+            {
+                cout << 2 << " " << -1 << " " << -1 << " ";
+
+                for (int i = 0; i < n - 3; i += 2)
+                {
+                    cout << 1 << " " << -1 << " ";
+                }
+                cout << endl;
+            }
         }
-
-        vector<int> A;
-
-        if (N == 2) {
-            cout << "3 -3\n";
-            continue;
+        else
+        {
+            for (int i = 0; i < n; i += 2)
+            {
+                cout << 1 << " " << -1 << " ";
+            }
+            cout << endl;
         }
-
-        if (N == 3) {
-            cout << "1 2 -3\n";
-            continue;
-        }
-
-        vector<int> base({1, -1, 2, -2});
-        int count = N;
-        while (count >= 4) {
-            A.insert(A.end(), base.begin(), base.end());
-            count -= 4;
-        }
-
-        if (count == 1) {
-            cout << -1 << "\n";
-            continue;
-        }
-
-        if (count == 2) {
-            A.push_back(3);
-            A.push_back(-3);
-        }
-
-        if (count == 3) {
-            A.push_back(1);
-            A.push_back(2);
-            A.push_back(-3);
-        }
-
-        for (int x : A)
-            cout << x << " ";
-        cout << "\n";
     }
 
     return 0;
